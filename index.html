@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!--CSS-->
+  <link rel="stylesheet" href="tdg.css">
+</head>
+
+<body>
+  <!--navbar for future functionality -->
+  <!-- As a heading -->
+  <nav class="navbar navbar-light bg-dark">
+    <span class="navbar-brand mb-0 h1 text-white">IKIGAI</span>
+  </nav>
+
+
+  <div class="Topsection">
+    <div class="row mx-0">
+      <div class="col-sm-12 col-md-6 bg-top">
+        <div class="jumbotron bg-top">
+          <h1 class="display-4 ">IKIGAI Principle</h1>
+          <p class="lead">Fast and effective way to analyse your "dream job" and sort your priorities right.</p>
+          <hr class="my-4">
+
+          <p class="lead">
+            <a class="btn btn-primary btn-lg" href="https://livingtoroam.com/ikigai" role="button">Learn more</a>
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 bg-top">
+        <div class="mx-auto">
+          <img src="assets/ikigai.png">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="Infosection">
+    <div class="row m-0">
+      <div class="col-sm-12 bg-bottom">
+        <blockquote class="blockquote text-center">
+          <p class="mb-0 pt-1">It start figuring out click on the button below.</p>
+          <hr class="my-4">
+          <a href="#" class="btn btn-primary btn-lg" role="button" aria-disabled="true" data-toggle="modal"
+            data-target="#Modal">Start Here</a>
+        </blockquote>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">IKIGAI Data collection</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                  <label for="things_love">Enter the things that you love (different items can be seprated by comma ',' ):</label>
+                  <textarea class="form-control" id="input_love" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="things_love">Enter the things in which you are good (different items can be seprated by comma ',' ):</label>
+                    <textarea class="form-control" id="input_good" rows="3"></textarea>
+                  </div>
+                  <div class="form-group">
+                      <label for="things_love">Enter the things for which you could be paid for  (different items can be seprated by comma ',' ):</label>
+                      <textarea class="form-control" id="input_paid" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="things_love">Enter the things that the world needs  (different items can be seprated by comma ',' ):</label>
+                        <textarea class="form-control" id="input_world" rows="3"></textarea>
+                      </div>
+
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary btn-success" onclick="go()" data-toggle="modal"
+          data-target="#answer_tab"  data-dismiss="modal">Analyse</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="modal fade" id="answer_tab" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Result Analysis</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <p class="lead">Your passionate about:</p>
+              <p id="passion_ans_field">""</p>
+              <p class="lead">Your Mission should be:</p>
+              <p id="mission_ans_field">""</p>
+              <p class="lead">Your vocation should be:</p>
+              <p id="vocation_ans_field">""</p>
+              <p class="lead">Your profession should be:</p>
+              <p id="profession_ans_field">""</p>
+              <p class="lead">Your dream job is</p>
+              <p id="dream_job_final">""</p>
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+
+  
+  <!-- jQuery first, then Tether, then Bootstrap JS. -->
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+    integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+    integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+    crossorigin="anonymous"></script>
+  <script src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+  <script src="tdg.js"></script>
+</body>
+
+</html>
