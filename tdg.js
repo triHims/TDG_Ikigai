@@ -39,7 +39,7 @@ function go() {
     let passion_love_good = love_arr.filter(x => good_arr.includes(x));
     let mission_love_world = love_arr.filter(x => world_arr.includes(x));
     let profession_good_paid = good_arr.filter(x => paid_arr.includes(x));
-    let vocation_world_paid = world.filter(x => pair_arr.includes(x));
+    let vocation_world_paid = world_arr.filter(x => paid_arr.includes(x));
     console.log(passion_love_good);
     console.log(mission_love_world);
     console.log(profession_good_paid);
