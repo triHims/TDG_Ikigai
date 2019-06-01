@@ -36,18 +36,19 @@ function go() {
     //let intersections = things_good.filter(x => things_love.includes(x));
 
 
-    let passion_love_good = love_arr.filter(x => good_arr.includes(x));
-    let mission_love_world = love_arr.filter(x => world_arr.includes(x));
-    let profession_good_paid = good_arr.filter(x => paid_arr.includes(x));
-    let vocation_world_paid = world_arr.filter(x => paid_arr.includes(x));
+    let passion_love_good = love_arr.filter(x => good_arr.includes(x)); // intersection of passion ie love^good
+    let mission_love_world = love_arr.filter(x => world_arr.includes(x)); // intersection of mission ie. love^world
+    let profession_good_paid = good_arr.filter(x => paid_arr.includes(x)); // intersection of profession ie. good^paid
+    let vocation_world_paid = world_arr.filter(x => paid_arr.includes(x)); // // intersection of vocation ie. world^paid 
     console.log(passion_love_good);
     console.log(mission_love_world);
     console.log(profession_good_paid);
     console.log(vocation_world_paid);
-    let final1 = passion_love_good.filter(x => mission_love_world.includes(x));
-    let final2 = profession_good_paid.filter(x => vocation_world_paid.includes(x));
+    let final1 = passion_love_good.filter(x => mission_love_world.includes(x));  //finally to predict the final job 
+    let final2 = profession_good_paid.filter(x => vocation_world_paid.includes(x)); // taking intersection of passion^mission^profession^vocation
     let dream_job = final1.filter(x => final2.includes(x));
 
+    //some hacks to make make ui pleasent
     console.log(dream_job);
     if (passion_love_good.length === 1 && passion_love_good[0] == "" || passion_love_good.length===0) {
         document.getElementById("passion_ans_field").innerHTML = "None";
@@ -56,21 +57,21 @@ function go() {
         document.getElementById("passion_ans_field").innerHTML = passion_love_good;
 
 
-
+//some hacks to make make ui pleasent
     if (mission_love_world.length === 1 && mission_love_world[0] == "" || mission_love_world.length===0) {
         document.getElementById("mission_ans_field").innerHTML = "None";
     }
     else
         document.getElementById("mission_ans_field").innerHTML = mission_love_world;
 
-
+//some hacks to make make ui pleasent
     if (vocation_world_paid.length === 1 && vocation_world_paid[0] == "" || vocation_world_paid.length===0) {
         document.getElementById("vocation_ans_field").innerHTML = "None";
     }
     else
         document.getElementById("vocation_ans_field").innerHTML = vocation_world_paid;
 
-
+//some hacks to make make ui pleasent
     if (profession_good_paid.length === 1 && profession_good_paid[0] == "" || profession_good_paid.length===0) {
         document.getElementById("profession_ans_field").innerHTML = "None";
     }
@@ -79,7 +80,7 @@ function go() {
 
     console.log(dream_job.length);
 
-
+//some hacks to make make ui pleasent
     if (dream_job.length === 1 && dream_job[0] == "" || dream_job.length===0) {
         document.getElementById("dream_job_final").innerHTML = "You need to work on above Areas.";
     }
