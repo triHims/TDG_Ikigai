@@ -48,7 +48,7 @@
     <div class="row m-0">
       <div class="col-sm-12 bg-bottom">
         <blockquote class="blockquote text-center">
-          <p class="mb-0 pt-1">Start figuring it out click on the button below.</p>
+          <p class="mb-0 pt-1">Start figuring it out. Click on the button below.</p>
           <hr class="my-4">
           <a href="#" class="btn btn-primary btn-lg" role="button" aria-disabled="true" data-toggle="modal"
             data-target="#Modal">Start Here</a>
@@ -66,35 +66,39 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">IKIGAI Data collection</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
         <div class="modal-body">
-            <form>
-                <div class="form-group">
-                  <label for="things_love">Enter the things that you love (different items can be seprated by comma ',' ):</label>
-                  <textarea class="form-control" id="input_love" rows="3"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="things_love">Enter the things in which you are good (different items can be seprated by comma ',' ):</label>
-                    <textarea class="form-control" id="input_good" rows="3"></textarea>
-                  </div>
-                  <div class="form-group">
-                      <label for="things_love">Enter the things for which you could be paid for  (different items can be seprated by comma ',' ):</label>
-                      <textarea class="form-control" id="input_paid" rows="3"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="things_love">Enter the things that the world needs  (different items can be seprated by comma ',' ):</label>
-                        <textarea class="form-control" id="input_world" rows="3"></textarea>
-                      </div>
+          <form>
+            <div class="form-group">
+              <label for="things_love">Enter the things that you love (different items can be seprated by comma ','
+                ):</label>
+              <textarea class="form-control" id="input_love" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="things_love">Enter the things in which you are good (different items can be seprated by comma
+                ',' ):</label>
+              <textarea class="form-control" id="input_good" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="things_love">Enter the things for which you could be paid for (different items can be seprated
+                by comma ',' ):</label>
+              <textarea class="form-control" id="input_paid" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="things_love">Enter the things that the world needs (different items can be seprated by comma
+                ',' ):</label>
+              <textarea class="form-control" id="input_world" rows="3"></textarea>
+            </div>
 
-              </form>
+          </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary btn-success" onclick="go()" data-toggle="modal"
-          data-target="#answer_tab"  data-dismiss="modal">Analyse</button>
+            data-target="#answer_tab" data-dismiss="modal">Analyse</button>
         </div>
       </div>
     </div>
@@ -104,34 +108,68 @@
 
 
 
-  <div class="modal fade" id="answer_tab" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Result Analysis</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+  <div class="modal fade" id="answer_tab" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Result Analysis</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card mb-1 px-1 bg-warning text-white">
+                  <p class="lead mb-0">Your passionate about:</p>
+                  <p id="passion_ans_field">""</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card mb-1 px-1 text-white bg-orange">
+                  <p class="lead mb-0">Your Mission should be:</p>
+                  <p id="mission_ans_field">""</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card mb-1 px-1 bg-danger text-white">
+                  <p class="lead mb-0">Your vocation should be:</p>
+                  <p id="vocation_ans_field">""</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card mb-1 px-1 bg-light-green text-white">
+                  <p class="lead mb-0">Your profession should be:</p>
+                  <p id="profession_ans_field">""</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card px-1">
+                  <p class="lead mb-0">Your dream job is</p>
+                  <p id="dream_job_final">""</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="modal-body">
-              <p class="lead">Your passionate about:</p>
-              <p id="passion_ans_field">""</p>
-              <p class="lead">Your Mission should be:</p>
-              <p id="mission_ans_field">""</p>
-              <p class="lead">Your vocation should be:</p>
-              <p id="vocation_ans_field">""</p>
-              <p class="lead">Your profession should be:</p>
-              <p id="profession_ans_field">""</p>
-              <p class="lead">Your dream job is</p>
-              <p id="dream_job_final">""</p>
-          </div>
-          
-          
         </div>
       </div>
     </div>
+  </div>
 
-  
+
+
   <!-- jQuery first, then Tether, then Bootstrap JS. -->
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
     integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"

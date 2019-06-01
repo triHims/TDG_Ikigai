@@ -1,23 +1,23 @@
 
 function go() {
     var things_love = document.getElementById("input_love").value;
-    things_love = things_love.replace(/[^a-zA-Z0-9,]/g, "").toLowerCase();
+    things_love = things_love.replace(/[^a-zA-Z0-9,]/g, "");
     love_arr = things_love.split(",");
     love_arr = Array.from(love_arr);
 
 
     var things_good = document.getElementById("input_good").value;
-    things_good = things_good.replace(/[^a-zA-Z0-9,]/g, "").toLowerCase();
+    things_good = things_good.replace(/[^a-zA-Z0-9,]/g, "");
     good_arr = things_good.split(",");
     good_arr = Array.from(good_arr);
 
     var things_paid = document.getElementById("input_paid").value;
-    things_paid = things_paid.replace(/[^a-zA-Z0-9,]/g, "").toLowerCase();
+    things_paid = things_paid.replace(/[^a-zA-Z0-9,]/g, "");
     paid_arr = things_paid.split(",");
     paid_arr = Array.from(paid_arr);
 
     var things_world = document.getElementById("input_world").value;
-    things_world = things_world.replace(/[^a-zA-Z0-9,]/g, "").toLowerCase();
+    things_world = things_world.replace(/[^a-zA-Z0-9,]/g, "");
     world_arr = things_world.split(",");
     world_arr = Array.from(world_arr);
 
