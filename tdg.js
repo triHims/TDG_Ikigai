@@ -29,7 +29,7 @@ function go() {
     console.log(good_arr);
     console.log("printing paid arr ");
     console.log(world_arr);
-    //here i have taken the values and converted them into the the lowercase. Removed all the extra new line etc.
+    //here i have taken the values and Removed all the extra new line,special characters etc.
     //then i did save them in the array 
 
     //now i will find the intersections of the array 
